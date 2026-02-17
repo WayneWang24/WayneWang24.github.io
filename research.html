@@ -6,105 +6,131 @@
     <title>Chenwei Wang - Research</title>
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <link rel="shortcut icon" href="image/Wayne.jpg">
+    <script>
+      (function(){var t=localStorage.getItem('ds-theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();
+    </script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <!-- HEADER -->
-        <div id="header">
-            <div class="inner">
-                <div class="log">Chenwei Wang</div>
-                <div class="nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="current"><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="award.html">Awards</a></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">Chenwei Wang</a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="research.html" class="nav__link nav__link--active">Research</a></li>
+                <li><a href="publications.html" class="nav__link">Publications</a></li>
+                <li><a href="award.html" class="nav__link">Awards</a></li>
+            </ul>
+            <button class="nav__theme-toggle" aria-label="Toggle theme">
+                <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+            </button>
+            <button class="nav__hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </nav>
 
-        <!-- MAIN CONTENT -->
-        <div id="main">
-            <div class="inner">
-                <h3>Research Overview</h3>
-                <p>My research centers on <strong>multimodal perception and representation learning</strong>, with a particular focus on tackling challenges such as data scarcity, cross-modal inconsistency, and complex environments. My work advances the development of intelligent multimodal perception systems capable of efficient inference and reliable decision-making in real-world scenarios.</p>
-
-                <p>Here is my <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
-
-                <div class="divider line"></div>
-
-                <h3>1. Multimodal Image Understanding</h3>
-
-                <h4>Microwave Remote Sensing Image Interpretation with Limited Samples</h4>
-                <ul>
-                    <li>Proposed a FeaCD net for recognizing vehicle, ship and so on. It incorporates domain knowledge to effectively supervise model optimization. This approach significantly reduces data volume requirements. Compared to existing methods, even when the sample size is reduced by 5-10 times, the ships recognition rates still exceed 70%.</li>
-                    <li>The proposed methods are fundamental processes for areas such as land use, maritime rescue and so on. Publications include <strong>ISPRS JPRS</strong>, <strong>IEEE TGRS</strong> and others.</li>
-                </ul>
-
-                <h4>Multimodal Information Retrieval for Panoptic Scene Graph Generation (PSG)</h4>
-                <ul>
-                    <li>Proposed a method introducing the coreset concept to clean multimodal datasets. It enhances the performance of recognizing semantic relations between instances within images. The method has boosted recall ratios by ~50% compared to existing methods.</li>
-                    <li>The proposed method can be extended for use with combinations of various modalities. Accepted by <strong>ACM MM 2023</strong> with full scores.</li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <h3>2. Multimodal Radar-Centric 3D Perception</h3>
-
-                <h4>Indoor Multi-View Radar Perception</h4>
-                <ul>
-                    <li>Proposed CrossFuser, a dual-stage fusion framework for indoor 3D object detection using multi-view mmWave radar. It decouples radar geometry modeling from cross-view feature fusion to address spatial inconsistency and severe multipath noise.</li>
-                    <li>Achieved state-of-the-art detection performance on benchmark indoor datasets under challenging conditions like occlusion and electromagnetic clutter. Submitted to <strong>AAAI 2026</strong>.</li>
-                </ul>
-
-                <h4>Camera-Radar Fusion for 3D Objective Detection in Automotive Driving</h4>
-                <ul>
-                    <li>Proposed CIFM-Fusion, a coarse-to-fine radar-camera fusion framework that decouples semantic alignment from feature fusion, mitigating radar-camera misalignment caused by resolution anisotropy.</li>
-                    <li>Outperformed existing fusion methods on the nuScenes benchmark, with significant reduction in offset errors, demonstrating strong robustness under adverse driving conditions. Submitted to <strong>AAAI 2026</strong>.</li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <h3>3. Biomedical Volume Reconstruction and Prediction</h3>
-
-                <h4>3D Fluorescence Microscopy Long-term Live-cell Imaging</h4>
-                <ul>
-                    <li>Proposed a dual Cycle-consistent Diffusion framework (VTCD) to simultaneously denoise and super-resolve 3D cell volumes in an unsupervised manner, overcoming issues of spatially varying noise and insufficient axial resolution.</li>
-                    <li>Experimental results on 10 in vivo cellular datasets show significant improvements in both denoising and super-resolution, with axial resolution enhanced from ~430nm to ~90nm, enabling clearer and more accurate long-term live-cell imaging. Accepted by <strong>CVPR 2025</strong> as <font color="#FF4D50"><strong>Highlight</strong></font>.</li>
-                </ul>
-
-                <h4>Information Perception for Assisted Diagnosis of Glomerular Diseases</h4>
-                <ul>
-                    <li>Under the guidance of professional doctors of Sichuan Provincial People's Hospital in China, I was responsible for organizing the pixel-level annotation of 1615 glomerular morphological lesions, including segmental sclerosis, crescent, and sclerosis.</li>
-                    <li>Proposed the EdgeSharp segmentor, pioneering in research semantic segmentation of glomerular morphological lesions with the mIoU and mPA of 67.91% and 77.06%, respectively.</li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <h3>4. Multimodal Indoor Localization and Navigation</h3>
-
-                <h4>Indoor Location and Navigation System</h4>
-                <ul>
-                    <li>Lead the team in the R&D of the indoor location system based on UWB, BLE RSSI/AOA, and developed an AI indoor location and navigation system with comprehensive function.</li>
-                    <li>The location accuracy based on BLE RSSI is 1-2m, UWB achieves 0.1m, and BLE AOA is 0.2-0.5m. In a 200m² room, the setup required only 5 BLE RSSI beacons, 3 UWB anchors, and 4 BLE AOA Receivers.</li>
-                    <li>Developed iOS and Android apps for the whole system, tested and adopted in the HK K11 mall and the HK MTR stations for blind care.</li>
-                </ul>
-
-                <h4>3D Indoor Localization System for UAVs based on Channel State Information</h4>
-                <ul>
-                    <li>Proposed a novel 3D indoor localization system leveraging low-cost ESP32 IoT-based channel state information (CSI) to enable accurate UAV positioning in GPS-denied indoor environments.</li>
-                    <li>Incorporated a dynamic AGC compensation algorithm to stabilize CSI signals and a multi-task Sensor-in-Sample (SiS) model to handle incomplete sensor data and limited training samples, ensuring robustness in resource-constrained scenarios.</li>
-                    <li>Experimental results show a LMSE localization error of 0.2629m in 3D space, offering a cost-effective, accurate, and scalable solution for UAVs in logistics, surveillance, and emergency response applications.</li>
-                </ul>
-
-                <!-- Footer -->
-                <div class="footer_small">
-                    <p>&copy; 2025 Chenwei Wang. Last updated: Feb 2025.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Mobile Drawer -->
+    <div class="nav__overlay"></div>
+    <div class="nav__drawer">
+        <button class="nav__drawer-close" aria-label="Close menu">&times;</button>
+        <ul class="nav__drawer-links">
+            <li><a href="index.html" class="nav__drawer-link">Home</a></li>
+            <li><a href="research.html" class="nav__drawer-link nav__drawer-link--active">Research</a></li>
+            <li><a href="publications.html" class="nav__drawer-link">Publications</a></li>
+            <li><a href="award.html" class="nav__drawer-link">Awards</a></li>
+        </ul>
     </div>
+
+    <!-- Page Content -->
+    <div class="site-wrapper">
+        <main class="page">
+
+            <section class="reveal">
+                <h3 class="section-title">Research Overview</h3>
+                <p>My research centers on <strong>multimodal perception and representation learning</strong>, with a particular focus on tackling challenges such as data scarcity, cross-modal inconsistency, and complex environments. My work advances the development of intelligent multimodal perception systems capable of efficient inference and reliable decision-making in real-world scenarios.</p>
+                <p>Here is my <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Research Cards -->
+            <div class="research-grid">
+
+                <!-- Card 1 -->
+                <div class="research-card reveal">
+                    <div class="research-card__number">01</div>
+                    <h3 class="research-card__title">Multimodal Image Understanding</h3>
+
+                    <h4 class="research-card__subtitle">Microwave Remote Sensing Image Interpretation with Limited Samples</h4>
+                    <p class="research-card__text">Proposed a FeaCD net for recognizing vehicle, ship and so on. It incorporates domain knowledge to effectively supervise model optimization. This approach significantly reduces data volume requirements. Compared to existing methods, even when the sample size is reduced by 5-10 times, the ships recognition rates still exceed 70%.</p>
+                    <p class="research-card__text">The proposed methods are fundamental processes for areas such as land use, maritime rescue and so on. Publications include <strong>ISPRS JPRS</strong>, <strong>IEEE TGRS</strong> and others.</p>
+
+                    <h4 class="research-card__subtitle">Multimodal Information Retrieval for Panoptic Scene Graph Generation (PSG)</h4>
+                    <p class="research-card__text">Proposed a method introducing the coreset concept to clean multimodal datasets. It enhances the performance of recognizing semantic relations between instances within images. The method has boosted recall ratios by ~50% compared to existing methods.</p>
+                    <p class="research-card__text">The proposed method can be extended for use with combinations of various modalities. Accepted by <strong>ACM MM 2023</strong> with full scores.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="research-card reveal">
+                    <div class="research-card__number">02</div>
+                    <h3 class="research-card__title">Multimodal Radar-Centric 3D Perception</h3>
+
+                    <h4 class="research-card__subtitle">Indoor Multi-View Radar Perception</h4>
+                    <p class="research-card__text">Proposed CrossFuser, a dual-stage fusion framework for indoor 3D object detection using multi-view mmWave radar. It decouples radar geometry modeling from cross-view feature fusion to address spatial inconsistency and severe multipath noise.</p>
+                    <p class="research-card__text">Achieved state-of-the-art detection performance on benchmark indoor datasets under challenging conditions like occlusion and electromagnetic clutter. Submitted to <strong>AAAI 2026</strong>.</p>
+
+                    <h4 class="research-card__subtitle">Camera-Radar Fusion for 3D Objective Detection in Automotive Driving</h4>
+                    <p class="research-card__text">Proposed CIFM-Fusion, a coarse-to-fine radar-camera fusion framework that decouples semantic alignment from feature fusion, mitigating radar-camera misalignment caused by resolution anisotropy.</p>
+                    <p class="research-card__text">Outperformed existing fusion methods on the nuScenes benchmark, with significant reduction in offset errors, demonstrating strong robustness under adverse driving conditions. Submitted to <strong>AAAI 2026</strong>.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="research-card reveal">
+                    <div class="research-card__number">03</div>
+                    <h3 class="research-card__title">Biomedical Volume Reconstruction and Prediction</h3>
+
+                    <h4 class="research-card__subtitle">3D Fluorescence Microscopy Long-term Live-cell Imaging</h4>
+                    <p class="research-card__text">Proposed a dual Cycle-consistent Diffusion framework (VTCD) to simultaneously denoise and super-resolve 3D cell volumes in an unsupervised manner, overcoming issues of spatially varying noise and insufficient axial resolution.</p>
+                    <p class="research-card__text">Experimental results on 10 in vivo cellular datasets show significant improvements in both denoising and super-resolution, with axial resolution enhanced from ~430nm to ~90nm, enabling clearer and more accurate long-term live-cell imaging. Accepted by <strong>CVPR 2025</strong> as <strong style="color: var(--highlight);">Highlight</strong>.</p>
+
+                    <h4 class="research-card__subtitle">Information Perception for Assisted Diagnosis of Glomerular Diseases</h4>
+                    <p class="research-card__text">Under the guidance of professional doctors of Sichuan Provincial People's Hospital in China, I was responsible for organizing the pixel-level annotation of 1615 glomerular morphological lesions, including segmental sclerosis, crescent, and sclerosis.</p>
+                    <p class="research-card__text">Proposed the EdgeSharp segmentor, pioneering in research semantic segmentation of glomerular morphological lesions with the mIoU and mPA of 67.91% and 77.06%, respectively.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="research-card reveal">
+                    <div class="research-card__number">04</div>
+                    <h3 class="research-card__title">Multimodal Indoor Localization and Navigation</h3>
+
+                    <h4 class="research-card__subtitle">Indoor Location and Navigation System</h4>
+                    <p class="research-card__text">Lead the team in the R&D of the indoor location system based on UWB, BLE RSSI/AOA, and developed an AI indoor location and navigation system with comprehensive function.</p>
+                    <p class="research-card__text">The location accuracy based on BLE RSSI is 1-2m, UWB achieves 0.1m, and BLE AOA is 0.2-0.5m. In a 200m&sup2; room, the setup required only 5 BLE RSSI beacons, 3 UWB anchors, and 4 BLE AOA Receivers.</p>
+                    <p class="research-card__text">Developed iOS and Android apps for the whole system, tested and adopted in the HK K11 mall and the HK MTR stations for blind care.</p>
+
+                    <h4 class="research-card__subtitle">3D Indoor Localization System for UAVs based on Channel State Information</h4>
+                    <p class="research-card__text">Proposed a novel 3D indoor localization system leveraging low-cost ESP32 IoT-based channel state information (CSI) to enable accurate UAV positioning in GPS-denied indoor environments.</p>
+                    <p class="research-card__text">Incorporated a dynamic AGC compensation algorithm to stabilize CSI signals and a multi-task Sensor-in-Sample (SiS) model to handle incomplete sensor data and limited training samples, ensuring robustness in resource-constrained scenarios.</p>
+                    <p class="research-card__text">Experimental results show a LMSE localization error of 0.2629m in 3D space, offering a cost-effective, accurate, and scalable solution for UAVs in logistics, surveillance, and emergency response applications.</p>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Chenwei Wang. Last updated: Feb 2026.</p>
+        </footer>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

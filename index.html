@@ -6,138 +6,243 @@
     <title>Chenwei Wang</title>
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <link rel="shortcut icon" href="image/Wayne.jpg">
+    <!-- Prevent FOUC: apply theme before paint -->
+    <script>
+      (function(){var t=localStorage.getItem('ds-theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();
+    </script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <!-- HEADER -->
-        <div id="header">
-            <div class="inner">
-                <div class="log">Chenwei Wang</div>
-                <div class="nav">
-                    <ul>
-                        <li class="current"><a href="index.html">Home</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="award.html">Awards</a></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">Chenwei Wang</a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+                <li><a href="research.html" class="nav__link">Research</a></li>
+                <li><a href="publications.html" class="nav__link">Publications</a></li>
+                <li><a href="award.html" class="nav__link">Awards</a></li>
+            </ul>
+            <button class="nav__theme-toggle" aria-label="Toggle theme">
+                <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+            </button>
+            <button class="nav__hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </nav>
 
-        <!-- MAIN CONTENT -->
-        <div id="main">
-            <div class="inner">
-                <!-- Profile Section -->
-                <div class="one_third">
-                    <img src="image/Wayne.jpg" alt="Chenwei Wang">
+    <!-- Mobile Drawer -->
+    <div class="nav__overlay"></div>
+    <div class="nav__drawer">
+        <button class="nav__drawer-close" aria-label="Close menu">&times;</button>
+        <ul class="nav__drawer-links">
+            <li><a href="index.html" class="nav__drawer-link nav__drawer-link--active">Home</a></li>
+            <li><a href="research.html" class="nav__drawer-link">Research</a></li>
+            <li><a href="publications.html" class="nav__drawer-link">Publications</a></li>
+            <li><a href="award.html" class="nav__drawer-link">Awards</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Content -->
+    <div class="site-wrapper">
+        <main class="page">
+
+            <!-- Hero Section -->
+            <section class="hero reveal">
+                <div class="hero__avatar-wrap">
+                    <img src="image/Wayne.jpg" alt="Chenwei Wang" class="hero__avatar">
                 </div>
-
-                <div class="two_third last">
-                    <h2>Chenwei Wang</h2>
-                    Postdoctoral Research Fellow<br>
-                    <a href="https://www.innocimda.com/" target="_blank">CityU-Oxford Joint CIMDA</a>,
-                    <a href="https://www.cityu.edu.hk/" target="_blank">City University of Hong Kong</a><br>
-                    Hong Kong Science Park, NT, Hong Kong<br><br>
-                    Email: dbw181101 [at] 163.com &nbsp;|&nbsp; Tel: +852 44015259<br><br>
-                    <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank">Google Scholar</a> &nbsp;|&nbsp;
-                    <a href="https://github.com/WayneWang24" target="_blank">GitHub</a>
+                <div class="hero__info">
+                    <h1 class="hero__name">Chenwei Wang</h1>
+                    <div class="hero__title">Postdoctoral Research Fellow</div>
+                    <div class="hero__details">
+                        <a href="https://www.innocimda.com/" target="_blank">CityU-Oxford Joint CIMDA</a>,
+                        <a href="https://www.cityu.edu.hk/" target="_blank">City University of Hong Kong</a><br>
+                        Hong Kong Science Park, NT, Hong Kong<br>
+                        Email: dbw181101 [at] 163.com &nbsp;|&nbsp; Tel: +852 44015259
+                    </div>
+                    <div class="hero__links">
+                        <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank" class="hero__link-btn hero__link-btn--primary">Google Scholar</a>
+                        <a href="https://github.com/WayneWang24" target="_blank" class="hero__link-btn hero__link-btn--secondary">GitHub</a>
+                    </div>
                 </div>
+            </section>
 
-                <div class="divider line"></div>
+            <div class="divider"></div>
 
-                <!-- Biography -->
-                <h3>Biography</h3>
+            <!-- Biography -->
+            <section class="reveal">
+                <h3 class="section-title">Biography</h3>
                 <p>I am a Postdoctoral Research Fellow at <a href="https://www.innocimda.com/" target="_blank">CityU-Oxford Joint CIMDA</a>, <a href="https://www.cityu.edu.hk/" target="_blank">City University of Hong Kong</a>, working with Prof. <a href="https://scholars.cityu.edu.hk/en/persons/hong-yan" target="_blank">Hong Yan</a> (Fellow of IEEE and IAPR). I received my Ph.D. degree from <a href="https://www.uestc.edu.cn/" target="_blank">University of Electronic Science and Technology of China (UESTC)</a> in 2023, supervised by Prof. <a href="https://faculty.uestc.edu.cn/huangyulin" target="_blank">Yulin Huang</a>. I was a visiting Ph.D. student at <a href="https://www.nextcenter.org/" target="_blank">NExT Research Center</a>, <a href="https://www.nus.edu.sg/" target="_blank">National University of Singapore</a>, working with Prof. <a href="https://www.chuatatseng.com/" target="_blank">Tat-Seng Chua</a>.</p>
 
                 <p>My research centers on <strong>multimodal perception and representation learning</strong>, with a particular focus on tackling challenges such as data scarcity, cross-modal inconsistency, and complex environments. I serve as a reviewer for top-tier journals (IEEE TIP, IEEE TNNLS, ISPRS JPRS, IEEE TGRS, etc.) and conferences (CVPR, AAAI, ICCV, ACM MM).</p>
+            </section>
 
-                <div class="divider line"></div>
+            <div class="divider"></div>
 
-                <!-- News -->
-                <h3>News</h3>
-                <ul>
-                    <li><font color="#FF4D50">[New!]</font> <strong>2026-02:</strong> Monograph "<strong>Synthetic Aperture Radar Target Recognition under Limited Training Data</strong>" accepted by Springer!</li>
-
-                    <li><font color="#FF4D50">[New!]</font> <strong>2026-02:</strong> One paper accepted by <strong>ICLR 2026</strong>!<br>
-                    <font color="#7563a4"><em>Recover Cell Tensor: Diffusion-Equivalent Tensor Completion for Fluorescence Microscopy Imaging.</em></font></li>
-
-                    <li><font color="#FF4D50">[New!]</font> <strong>2026-01:</strong> One paper accepted by <strong>IEEE Internet of Things Journal</strong>!<br>
-                    <font color="#7563a4"><em>CiUAV: Scalable Device-Free Indoor UAV Localization via Multi-Objective Optimized Network Using Channel State Information.</em></font></li>
-
-                    <li><font color="#FF4D50">[New!]</font> <strong>2025-12:</strong> Paper "<strong>Limited-Data SAR ATR Causal Method via Dual-Invariance Intervention</strong>" is selected ESI highly-cited paper!</li>
-
-                    <li><font color="#FF4D50">[New!]</font> <strong>2025-12:</strong> One paper accepted by <strong>IEEE Transactions on Industrial Informatics</strong>!<br>
-                    <font color="#7563a4"><em>A Spatio-Temporal Feature Distribution Network for Device-Free Power Inspection Activity Using WiFi CSI.</em></font></li>
-
-                    <li><font color="#FF4D50">[New!]</font> <strong>2025-12:</strong> One paper accepted by <strong>IEEE Transactions on Vehicular Technology</strong>!<br>
-                    <font color="#7563a4"><em>Evolving Collaborative Differential Evolution for Dynamic Multi-objective UAV Path Planning.</em></font></li>
-
-                    <li><font color="#FF4D50">[New!]</font> <strong>2025-11:</strong> Awarded <strong>Excellent Doctoral Dissertation of Sichuan Province</strong>!</li>
-
-                    <li><font color="#FF4D50">[New!]</font> <strong>2025-09:</strong> Received <strong>HK Tech 300 Seed Fund</strong>!</li>
-
-                    <li><font color="#FF4D50">[New!]</font> <strong>2025-04:</strong> One paper accepted by <strong>CVPR 2025</strong> as <font color="#FF4D50"><strong>Highlight</strong></font>!<br>
-                    <font color="#7563a4"><em>Volume Tells: Dual Cycle-Consistent Diffusion for 3D Fluorescence Microscopy Denoising and Super-Resolution.</em></font></li>
-
-                    <!-- <li><strong>2024:</strong> Awarded <strong>Excellent Doctoral Dissertation Award of UESTC</strong>!</li>
-
-                    <li><strong>2024:</strong> Ranked <strong>5th among 95 teams</strong> in the 2024 ISPRS TC I Contest!</li> -->
-
-                    <!-- <li><strong>2023:</strong> One paper accepted by <strong>ACM MM 2023</strong> with full scores!</li> -->
+            <!-- News -->
+            <section class="reveal">
+                <h3 class="section-title">News</h3>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <span class="news-item__badge">2026-02</span>
+                        <div>
+                            <span class="news-item__tag">New!</span>
+                            Monograph "<strong>Synthetic Aperture Radar Target Recognition under Limited Training Data</strong>" accepted by Springer!
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-item__badge">2026-02</span>
+                        <div>
+                            <span class="news-item__tag">New!</span>
+                            One paper accepted by <strong>ICLR 2026</strong>!<br>
+                            <span class="news-item__venue">Recover Cell Tensor: Diffusion-Equivalent Tensor Completion for Fluorescence Microscopy Imaging.</span>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-item__badge">2026-01</span>
+                        <div>
+                            <span class="news-item__tag">New!</span>
+                            One paper accepted by <strong>IEEE Internet of Things Journal</strong>!<br>
+                            <span class="news-item__venue">CiUAV: Scalable Device-Free Indoor UAV Localization via Multi-Objective Optimized Network Using Channel State Information.</span>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-item__badge">2025-12</span>
+                        <div>
+                            <span class="news-item__tag">New!</span>
+                            Paper "<strong>Limited-Data SAR ATR Causal Method via Dual-Invariance Intervention</strong>" is selected ESI highly-cited paper!
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-item__badge">2025-12</span>
+                        <div>
+                            <span class="news-item__tag">New!</span>
+                            One paper accepted by <strong>IEEE Transactions on Industrial Informatics</strong>!<br>
+                            <span class="news-item__venue">A Spatio-Temporal Feature Distribution Network for Device-Free Power Inspection Activity Using WiFi CSI.</span>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-item__badge">2025-12</span>
+                        <div>
+                            <span class="news-item__tag">New!</span>
+                            One paper accepted by <strong>IEEE Transactions on Vehicular Technology</strong>!<br>
+                            <span class="news-item__venue">Evolving Collaborative Differential Evolution for Dynamic Multi-objective UAV Path Planning.</span>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-item__badge">2025-11</span>
+                        <div>
+                            <span class="news-item__tag">New!</span>
+                            Awarded <strong>Excellent Doctoral Dissertation of Sichuan Province</strong>!
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-item__badge">2025-09</span>
+                        <div>
+                            <span class="news-item__tag">New!</span>
+                            Received <strong>HK Tech 300 Seed Fund</strong>!
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-item__badge">2025-04</span>
+                        <div>
+                            <span class="news-item__tag">New!</span>
+                            One paper accepted by <strong>CVPR 2025</strong> as <span class="news-item__tag">Highlight</span>!<br>
+                            <span class="news-item__venue">Volume Tells: Dual Cycle-Consistent Diffusion for 3D Fluorescence Microscopy Denoising and Super-Resolution.</span>
+                        </div>
+                    </li>
                 </ul>
+            </section>
 
-                <div class="divider line"></div>
+            <div class="divider"></div>
 
-                <!-- Selected Publications -->
-                <h3>Selected Publications</h3>
+            <!-- Selected Publications -->
+            <section class="reveal">
+                <h3 class="section-title">Selected Publications</h3>
                 <p>I have published 30+ papers in top-tier journals and conferences. Full list: <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank"><strong>Google Scholar</strong></a></p>
 
-                <ul>
-                    <li><strong>[ICLR 2026]</strong> Recover Cell Tensor: Diffusion-Equivalent Tensor Completion for Fluorescence Microscopy Imaging.<br>
-                    <strong>Chenwei Wang</strong>, Zhaoke Huang, Zelin Li, Wenqi Zhu.</li>
-
-                    <li><strong>[CVPR 2025, Highlight]</strong> Volume Tells: Dual Cycle-Consistent Diffusion for 3D Fluorescence Microscopy Denoising and Super-Resolution.<br>
-                    Zelin Li*, <strong>Chenwei Wang*</strong>, Zhaoke Huang, Yiming Ma, Zhongying Zhao, Hong Yan.</li>
-
-                    <li><strong>[Springer Monograph]</strong> Synthetic Aperture Radar Target Recognition under Limited Training Data: Theory and Methods.<br>
-                    <strong>Chenwei Wang*</strong>, Jifang Pei, Yulin Huang. (In press)</li>
-
-                    <li><strong>[ISPRS JPRS, IF=12.2]</strong> Crucial Feature Capture and Discrimination for Limited Training Data SAR ATR.<br>
-                    <strong>Chenwei Wang</strong>, Siyi Luo, Jifang Pei, Yulin Huang, Yin Zhang, Jianyu Yang.</li>
-
-                    <li><strong>[IEEE TGRS, ESI Highly Cited]</strong> Limited-Data SAR ATR Causal Method via Dual-Invariance Intervention.<br>
-                    <strong>Chenwei Wang</strong>, Renjie Xu, Yulin Huang, Jifang Pei, Chuan Huang, Wenqi Zhu, Jianyu Yang.</li>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <span class="pub-item__venue">ICLR 2026</span>
+                        <div class="pub-item__title">Recover Cell Tensor: Diffusion-Equivalent Tensor Completion for Fluorescence Microscopy Imaging.</div>
+                        <div class="pub-item__authors"><strong>Chenwei Wang</strong>, Zhaoke Huang, Zelin Li, Wenqi Zhu.</div>
+                    </li>
+                    <li class="pub-item">
+                        <span class="pub-item__venue pub-item__venue--highlight">CVPR 2025, Highlight</span>
+                        <div class="pub-item__title">Volume Tells: Dual Cycle-Consistent Diffusion for 3D Fluorescence Microscopy Denoising and Super-Resolution.</div>
+                        <div class="pub-item__authors">Zelin Li*, <strong>Chenwei Wang*</strong>, Zhaoke Huang, Yiming Ma, Zhongying Zhao, Hong Yan.</div>
+                    </li>
+                    <li class="pub-item">
+                        <span class="pub-item__venue">Springer Monograph</span>
+                        <div class="pub-item__title">Synthetic Aperture Radar Target Recognition under Limited Training Data: Theory and Methods.</div>
+                        <div class="pub-item__authors"><strong>Chenwei Wang*</strong>, Jifang Pei, Yulin Huang. (In press)</div>
+                    </li>
+                    <li class="pub-item">
+                        <span class="pub-item__venue">ISPRS JPRS, IF=12.2</span>
+                        <div class="pub-item__title">Crucial Feature Capture and Discrimination for Limited Training Data SAR ATR.</div>
+                        <div class="pub-item__authors"><strong>Chenwei Wang</strong>, Siyi Luo, Jifang Pei, Yulin Huang, Yin Zhang, Jianyu Yang.</div>
+                    </li>
+                    <li class="pub-item">
+                        <span class="pub-item__venue pub-item__venue--highlight">IEEE TGRS, ESI Highly Cited</span>
+                        <div class="pub-item__title">Limited-Data SAR ATR Causal Method via Dual-Invariance Intervention.</div>
+                        <div class="pub-item__authors"><strong>Chenwei Wang</strong>, Renjie Xu, Yulin Huang, Jifang Pei, Chuan Huang, Wenqi Zhu, Jianyu Yang.</div>
+                    </li>
                 </ul>
+            </section>
 
-                <div class="divider line"></div>
+            <div class="divider"></div>
 
-                <!-- Background -->
-                <h3>Background</h3>
-                <ul>
-                    <li><strong>2024.03 - Present:</strong> Postdoctoral Research Fellow, CityU-Oxford Joint CIMDA, City University of Hong Kong<br>
-                    Supervisor: <a href="https://scholars.cityu.edu.hk/en/persons/hong-yan" target="_blank">Prof. Hong Yan</a> (Fellow of IEEE and IAPR)</li>
-
-                    <li><strong>2022.09 - 2023.09:</strong> Visiting Ph.D., NExT Research Center, National University of Singapore<br>
-                    Supervisor: <a href="https://www.chuatatseng.com/" target="_blank">Prof. Tat-Seng Chua</a></li>
-
-                    <li><strong>2018.09 - 2023.12:</strong> Ph.D. in Deep Learning and Image Processing, UESTC<br>
-                    Supervisor: <a href="https://faculty.uestc.edu.cn/huangyulin" target="_blank">Prof. Yulin Huang</a></li>
-
-                    <li><strong>2014.09 - 2018.06:</strong> B.Eng. in Electronic Information Engineering, UESTC (GPA: 3.78/4.0)</li>
-                </ul>
-
-                <!-- ClustrMaps Visitor Map -->
-                <div style="text-align: center; margin: 20px 0;">
-                    <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=1bzck"></script>
+            <!-- Background (Timeline) -->
+            <section class="reveal">
+                <h3 class="section-title">Background</h3>
+                <div class="timeline">
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__date">2024.03 - Present</div>
+                        <div class="timeline__title">Postdoctoral Research Fellow, CityU-Oxford Joint CIMDA, City University of Hong Kong</div>
+                        <div class="timeline__desc">Supervisor: <a href="https://scholars.cityu.edu.hk/en/persons/hong-yan" target="_blank">Prof. Hong Yan</a> (Fellow of IEEE and IAPR)</div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__date">2022.09 - 2023.09</div>
+                        <div class="timeline__title">Visiting Ph.D., NExT Research Center, National University of Singapore</div>
+                        <div class="timeline__desc">Supervisor: <a href="https://www.chuatatseng.com/" target="_blank">Prof. Tat-Seng Chua</a></div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__date">2018.09 - 2023.12</div>
+                        <div class="timeline__title">Ph.D. in Deep Learning and Image Processing, UESTC</div>
+                        <div class="timeline__desc">Supervisor: <a href="https://faculty.uestc.edu.cn/huangyulin" target="_blank">Prof. Yulin Huang</a></div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__date">2014.09 - 2018.06</div>
+                        <div class="timeline__title">B.Eng. in Electronic Information Engineering, UESTC</div>
+                        <div class="timeline__desc">GPA: 3.78/4.0</div>
+                    </div>
                 </div>
+            </section>
 
-                <!-- Footer -->
-                <div class="footer_small">
-                    <p>&copy; 2026 Chenwei Wang. Last updated: Feb 2026.</p>
-                </div>
+            <!-- ClustrMaps Visitor Map -->
+            <div class="visitor-map reveal">
+                <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=1bzck"></script>
             </div>
-        </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Chenwei Wang. Last updated: Feb 2026.</p>
+        </footer>
     </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

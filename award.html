@@ -6,65 +6,150 @@
     <title>Chenwei Wang - Awards</title>
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <link rel="shortcut icon" href="image/Wayne.jpg">
+    <script>
+      (function(){var t=localStorage.getItem('ds-theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();
+    </script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <!-- HEADER -->
-        <div id="header">
-            <div class="inner">
-                <div class="log">Chenwei Wang</div>
-                <div class="nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li class="current"><a href="award.html">Awards</a></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">Chenwei Wang</a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="research.html" class="nav__link">Research</a></li>
+                <li><a href="publications.html" class="nav__link">Publications</a></li>
+                <li><a href="award.html" class="nav__link nav__link--active">Awards</a></li>
+            </ul>
+            <button class="nav__theme-toggle" aria-label="Toggle theme">
+                <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+            </button>
+            <button class="nav__hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </nav>
 
-        <!-- MAIN CONTENT -->
-        <div id="main">
-            <div class="inner">
-                <h3>Honors and Awards</h3>
-
-                <div class="divider line"></div>
-
-                <h4>Academic Awards</h4>
-                <ul>
-                    <li><strong>2025</strong> &nbsp;|&nbsp; Excellent Doctoral Dissertation of Sichuan Province</li>
-                    <li><strong>2025</strong> &nbsp;|&nbsp; HK Tech 300 Seed Fund</li>
-                    <li><strong>2024</strong> &nbsp;|&nbsp; Excellent Doctoral Dissertation Award of UESTC</li>
-                    <li><strong>2023</strong> &nbsp;|&nbsp; UESTC Honor SICE Person of the Year</li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <h4>Contests and Competitions</h4>
-                <ul>
-                    <li><strong>2024</strong> &nbsp;|&nbsp; 5th place among 95 teams in the 2024 ISPRS TC I Contest</li>
-                    <li><strong>2017</strong> &nbsp;|&nbsp; National Second Prize in Mathematical Modeling Competition</li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <h4>Scholarships</h4>
-                <ul>
-                    <li><strong>2022</strong> &nbsp;|&nbsp; Tencent Second Class Scholarship</li>
-                    <li><strong>2022</strong> &nbsp;|&nbsp; Scholarships of China Scholarship Council (CSC)</li>
-                    <li><strong>2022</strong> &nbsp;|&nbsp; Academic Newcomer Scholarship of UESTC</li>
-                    <li><strong>2018-2021</strong> &nbsp;|&nbsp; Multiple First Academic Scholarships</li>
-                    <li><strong>2014-2018</strong> &nbsp;|&nbsp; Multiple First Academic Scholarships (Undergraduate)</li>
-                </ul>
-
-                <!-- Footer -->
-                <div class="footer_small">
-                    <p>&copy; 2025 Chenwei Wang. Last updated: Feb 2025.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Mobile Drawer -->
+    <div class="nav__overlay"></div>
+    <div class="nav__drawer">
+        <button class="nav__drawer-close" aria-label="Close menu">&times;</button>
+        <ul class="nav__drawer-links">
+            <li><a href="index.html" class="nav__drawer-link">Home</a></li>
+            <li><a href="research.html" class="nav__drawer-link">Research</a></li>
+            <li><a href="publications.html" class="nav__drawer-link">Publications</a></li>
+            <li><a href="award.html" class="nav__drawer-link nav__drawer-link--active">Awards</a></li>
+        </ul>
     </div>
+
+    <!-- Page Content -->
+    <div class="site-wrapper">
+        <main class="page">
+
+            <section class="reveal">
+                <h3 class="section-title">Honors and Awards</h3>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Academic Awards -->
+            <section class="awards-section reveal">
+                <div class="awards-section__title">
+                    <div class="awards-section__icon awards-section__icon--academic">
+                        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                    </div>
+                    Academic Awards
+                </div>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <span class="award-card__year">2025</span>
+                        <span class="award-card__text">Excellent Doctoral Dissertation of Sichuan Province</span>
+                    </div>
+                    <div class="award-card">
+                        <span class="award-card__year">2025</span>
+                        <span class="award-card__text">HK Tech 300 Seed Fund</span>
+                    </div>
+                    <div class="award-card">
+                        <span class="award-card__year">2024</span>
+                        <span class="award-card__text">Excellent Doctoral Dissertation Award of UESTC</span>
+                    </div>
+                    <div class="award-card">
+                        <span class="award-card__year">2023</span>
+                        <span class="award-card__text">UESTC Honor SICE Person of the Year</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Contests and Competitions -->
+            <section class="awards-section reveal">
+                <div class="awards-section__title">
+                    <div class="awards-section__icon awards-section__icon--contest">
+                        <svg viewBox="0 0 24 24"><path d="M7.5 4A5.5 5.5 0 0 0 2 9.5c0 .28.03.55.07.82L2 10.5V11h2v-.5c0-.08 0-.17-.01-.25-.02-.25-.04-.5-.04-.75A3.5 3.5 0 0 1 7.5 6H8V4h-.5zM18 4v2h.5a3.5 3.5 0 0 1 3.5 3.5c0 .25-.02.5-.04.75L22 10.5V11h2v-.5l-.07-.18c.04-.27.07-.54.07-.82A5.5 5.5 0 0 0 18.5 4H18zM12 4c-3.31 0-6 2.69-6 6v2h2v-2a4 4 0 0 1 8 0v2h2v-2c0-3.31-2.69-6-6-6zM9 13v2h6v-2H9zm-2 4v2h10v-2H7zm-1 4v2h12v-2H6z"/></svg>
+                    </div>
+                    Contests and Competitions
+                </div>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <span class="award-card__year">2024</span>
+                        <span class="award-card__text">5th place among 95 teams in the 2024 ISPRS TC I Contest</span>
+                    </div>
+                    <div class="award-card">
+                        <span class="award-card__year">2017</span>
+                        <span class="award-card__text">National Second Prize in Mathematical Modeling Competition</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Scholarships -->
+            <section class="awards-section reveal">
+                <div class="awards-section__title">
+                    <div class="awards-section__icon awards-section__icon--scholarship">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.94s4.18 1.36 4.18 3.85c0 1.89-1.44 2.98-3.12 3.19z"/></svg>
+                    </div>
+                    Scholarships
+                </div>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <span class="award-card__year">2022</span>
+                        <span class="award-card__text">Tencent Second Class Scholarship</span>
+                    </div>
+                    <div class="award-card">
+                        <span class="award-card__year">2022</span>
+                        <span class="award-card__text">Scholarships of China Scholarship Council (CSC)</span>
+                    </div>
+                    <div class="award-card">
+                        <span class="award-card__year">2022</span>
+                        <span class="award-card__text">Academic Newcomer Scholarship of UESTC</span>
+                    </div>
+                    <div class="award-card">
+                        <span class="award-card__year">2018-2021</span>
+                        <span class="award-card__text">Multiple First Academic Scholarships</span>
+                    </div>
+                    <div class="award-card">
+                        <span class="award-card__year">2014-2018</span>
+                        <span class="award-card__text">Multiple First Academic Scholarships (Undergraduate)</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Chenwei Wang. Last updated: Feb 2026.</p>
+        </footer>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

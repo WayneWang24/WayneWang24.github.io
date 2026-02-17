@@ -6,147 +6,287 @@
     <title>Chenwei Wang - Publications</title>
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <link rel="shortcut icon" href="image/Wayne.jpg">
+    <script>
+      (function(){var t=localStorage.getItem('ds-theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();
+    </script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <!-- HEADER -->
-        <div id="header">
-            <div class="inner">
-                <div class="log">Chenwei Wang</div>
-                <div class="nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li class="current"><a href="publications.html">Publications</a></li>
-                        <li><a href="award.html">Awards</a></li>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">Chenwei Wang</a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="research.html" class="nav__link">Research</a></li>
+                <li><a href="publications.html" class="nav__link nav__link--active">Publications</a></li>
+                <li><a href="award.html" class="nav__link">Awards</a></li>
+            </ul>
+            <button class="nav__theme-toggle" aria-label="Toggle theme">
+                <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+            </button>
+            <button class="nav__hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="nav__overlay"></div>
+    <div class="nav__drawer">
+        <button class="nav__drawer-close" aria-label="Close menu">&times;</button>
+        <ul class="nav__drawer-links">
+            <li><a href="index.html" class="nav__drawer-link">Home</a></li>
+            <li><a href="research.html" class="nav__drawer-link">Research</a></li>
+            <li><a href="publications.html" class="nav__drawer-link nav__drawer-link--active">Publications</a></li>
+            <li><a href="award.html" class="nav__drawer-link">Awards</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Content -->
+    <div class="site-wrapper">
+        <main class="page">
+
+            <section class="reveal">
+                <h3 class="section-title">Publications</h3>
+                <div class="page-intro">
+                    <p>I have published 30+ papers in top-tier journals and conferences such as CVPR, ICLR, ACM MM, ISPRS JPRS, IEEE TGRS, IEEE TII, IEEE TVT and so on. I have also been granted 10+ Chinese national invention patents and 1 US patent.</p>
+                    <p>* denotes equal contribution. <strong>Bold name</strong> indicates first/corresponding author.</p>
+                    <p>Full list: <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank"><strong>Google Scholar</strong></a></p>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Monograph -->
+            <section class="pub-section reveal">
+                <h3 class="section-title">Monograph</h3>
+                <div class="pub-entry">
+                    <div class="pub-entry__tags">
+                        <span class="pub-entry__tag pub-entry__tag--venue">Springer</span>
+                    </div>
+                    <div class="pub-entry__title">Synthetic Aperture Radar Target Recognition under Limited Training Data: Theory and Methods</div>
+                    <div class="pub-entry__authors"><strong>Chenwei Wang*</strong>, Jifang Pei, Yulin Huang.</div>
+                    <div class="pub-entry__detail">Springer Singapore. ISBN: 978-981-95-3677-1 (In press)</div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Journal & Conference Papers -->
+            <section class="pub-section reveal">
+                <h3 class="section-title">Journal &amp; Conference Papers</h3>
+
+                <!-- 2026 -->
+                <div class="pub-year-group">
+                    <div class="pub-year-badge">2026</div>
+                    <ul class="pub-year-list">
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">ICLR 2026</span>
+                            </div>
+                            <div class="pub-entry__title">Recover Cell Tensor: Diffusion-Equivalent Tensor Completion for Fluorescence Microscopy Imaging.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Zhaoke Huang, Zelin Li, Wenqi Zhu.</div>
+                            <div class="pub-entry__detail">International Conference on Learning Representations (ICLR) 2026.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE IoT-J</span>
+                                <span class="pub-entry__tag pub-entry__tag--secondary">Co-first</span>
+                            </div>
+                            <div class="pub-entry__title">CiUAV: Scalable Device-Free Indoor UAV Localization via Multi-Objective Optimized Network Using Channel State Information.</div>
+                            <div class="pub-entry__authors">Cunyi Yin*, <strong>Chenwei Wang*</strong>, Zhaoke Huang, Hao Jiang, Jing Chen, Xiren Miao, Shaocong Zheng, Jianfei Yang, Zhiwen Chen, Zhenghua Chen, Hong Yan.</div>
+                            <div class="pub-entry__detail">IEEE Internet of Things Journal, 2026. (Co-first)</div>
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </div>
 
-        <!-- MAIN CONTENT -->
-        <div id="main">
-            <div class="inner">
-                <h3>Publications</h3>
-                <p>I have published 30+ papers in top-tier journals and conferences such as CVPR, ICLR, ACM MM, ISPRS JPRS, IEEE TGRS, IEEE TII, IEEE TVT and so on. I have also been granted 10+ Chinese national invention patents and 1 US patent.</p>
-                <p>* denotes equal contribution. <strong>Bold name</strong> indicates first/corresponding author.</p>
-                <p>Full list: <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank"><strong>Google Scholar</strong></a></p>
-
-                <div class="divider line"></div>
-
-                <h3>Monograph</h3>
-                <ul>
-                    <li><strong>Synthetic Aperture Radar Target Recognition under Limited Training Data: Theory and Methods</strong><br>
-                    <strong>Chenwei Wang*</strong>, Jifang Pei, Yulin Huang.<br>
-                    <em>Springer Singapore. ISBN: 978-981-95-3677-1 (In press)</em></li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <h3>Journal & Conference Papers</h3>
-
-                <h4>2026</h4>
-                <ul>
-                    <li><strong>[ICLR 2026]</strong> Recover Cell Tensor: Diffusion-Equivalent Tensor Completion for Fluorescence Microscopy Imaging.<br>
-                    <strong>Chenwei Wang</strong>, Zhaoke Huang, Zelin Li, Wenqi Zhu.<br>
-                    <em>International Conference on Learning Representations (ICLR) 2026.</em></li>
-
-                    <li><strong>[IEEE IoT-J]</strong> CiUAV: Scalable Device-Free Indoor UAV Localization via Multi-Objective Optimized Network Using Channel State Information.<br>
-                    Cunyi Yin*, <strong>Chenwei Wang*</strong>, Zhaoke Huang, Hao Jiang, Jing Chen, Xiren Miao, Shaocong Zheng, Jianfei Yang, Zhiwen Chen, Zhenghua Chen, Hong Yan.<br>
-                    <em>IEEE Internet of Things Journal, 2026. (Co-first)</em></li>
-                </ul>
-
-                <h4>2025</h4>
-                <ul>
-                    <li><strong>[CVPR 2025, <font color="#FF4D50">Highlight</font>]</strong> Volume Tells: Dual Cycle-Consistent Diffusion for 3D Fluorescence Microscopy Denoising and Super-Resolution.<br>
-                    Zelin Li*, <strong>Chenwei Wang*</strong>, Zhaoke Huang, Yiming Ma, Cunmin Zhao, Zhongying Zhao, Hong Yan.<br>
-                    <em>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025. (Co-first)</em></li>
-
-                    <li><strong>[IEEE TGRS, <font color="#FF4D50">ESI Highly Cited</font>]</strong> Limited-Data SAR ATR Causal Method via Dual-Invariance Intervention.<br>
-                    <strong>Chenwei Wang</strong>, Renjie Xu, Yulin Huang, Jifang Pei, Chuan Huang, Wenqi Zhu, Jianyu Yang.<br>
-                    <em>IEEE Transactions on Geoscience and Remote Sensing, 2025.</em></li>
-
-                    <li><strong>[IEEE TII]</strong> A Spatio-Temporal Feature Distribution Network for Device-Free Power Inspection Activity Using WiFi CSI.<br>
-                    Cunyi Yin, Zhaoke Huang, Hao Jiang, Jing Chen, Zhida Wang, <strong>Chenwei Wang</strong>, Zhenghua Chen, Zhiwen Chen, Hong Yan.<br>
-                    <em>IEEE Transactions on Industrial Informatics, 2025.</em></li>
-
-                    <li><strong>[IEEE TVT]</strong> Evolving Collaborative Differential Evolution for Dynamic Multi-objective UAV Path Planning.<br>
-                    Renjie Xu, Zhaoke Huang, <strong>Chenwei Wang</strong>, Hong Yan.<br>
-                    <em>IEEE Transactions on Vehicular Technology, 2025.</em></li>
-
-                    <li><strong>[arXiv]</strong> An Interpretable Two-Stage Feature Decomposition Method for Deep Learning-based SAR ATR.<br>
-                    <strong>Chenwei Wang</strong>, Renjie Xu, Congwen Wu, Cunyi Yin, Ziyun Liao, Deqing Mao, Sitong Zhang, Hong Yan.<br>
-                    <em>arXiv preprint arXiv:2506.09377, 2025.</em></li>
-                </ul>
-
-                <h4>2024</h4>
-                <ul>
-                    <li><strong>[ISPRS JPRS, IF=12.7]</strong> Crucial Feature Capture and Discrimination for Limited Training Data SAR ATR.<br>
-                    <strong>Chenwei Wang</strong>, Siyi Luo, Jifang Pei, Yulin Huang, Yin Zhang, Jianyu Yang.<br>
-                    <em>ISPRS Journal of Photogrammetry and Remote Sensing, vol. 204, pp. 291-305, 2024.</em></li>
-
-                    <li><strong>[IEEE GRSL]</strong> Unveiling Causalities in SAR ATR: A Causal Interventional Approach for Limited Data.<br>
-                    <strong>Chenwei Wang</strong>, Xin Chen, You Qin, Siyi Luo, Yulin Huang, Jifang Pei, Jianyu Yang.<br>
-                    <em>IEEE Geoscience and Remote Sensing Letters, 2024.</em></li>
-                </ul>
-
-                <h4>2023</h4>
-                <ul>
-                    <li><strong>[IEEE TGRS]</strong> SAR ATR Method with Limited Training Data via an Embedded Feature Augmenter and Dynamic Hierarchical-Feature Refiner.<br>
-                    <strong>Chenwei Wang</strong>, Siyi Luo, Yulin Huang, Jifang Pei, Yin Zhang, Jianyu Yang.<br>
-                    <em>IEEE Transactions on Geoscience and Remote Sensing, vol. 61, pp. 1-15, 2023.</em></li>
-
-                    <li><strong>[IEEE TGRS]</strong> HDSS-Net: A Novel Hierarchically Designed Network with Spherical Space Classifier for Ship Recognition in SAR Images.<br>
-                    Yuanzhe Shang, Wei Pu, Congwen Wu, Danling Liao, Xiaowo Xu, <strong>Chenwei Wang</strong>, Yulin Huang, Yin Zhang, Junjie Wu, Jianyu Yang.<br>
-                    <em>IEEE Transactions on Geoscience and Remote Sensing, vol. 61, pp. 1-20, 2023.</em></li>
-
-                    <li><strong>[ACM MM 2023]</strong> Biased-Predicate Annotation Identification via Unbiased Visual Predicate Representation.<br>
-                    Li Li*, <strong>Chenwei Wang*</strong>, You Qin, Wei Ji, Renjie Liang.<br>
-                    <em>Proceedings of the 31st ACM International Conference on Multimedia, pp. 4410-4420, 2023. (Co-first)</em></li>
-
-                    <li><strong>[IEEE GRSL]</strong> An Entropy-Awareness Meta-Learning Method for SAR Open-Set ATR.<br>
-                    <strong>Chenwei Wang</strong>, Siyi Luo, Jifang Pei, Xiaoyu Liu, Yulin Huang, Yin Zhang, Jianyu Yang.<br>
-                    <em>IEEE Geoscience and Remote Sensing Letters, vol. 20, pp. 1-5, 2023.</em></li>
-
-                    <li><strong>[IEEE GRSL]</strong> SAR Ship Target Recognition via Multiscale Feature Attention and Adaptive-Weighed Classifier.<br>
-                    <strong>Chenwei Wang</strong>, Jifang Pei, Siyi Luo, Weibo Huo, Yulin Huang, Yin Zhang, Jianyu Yang.<br>
-                    <em>IEEE Geoscience and Remote Sensing Letters, vol. 20, pp. 1-5, 2023.</em></li>
-
-                    <li><strong>[IEEE RadarConf 2023]</strong> SAR ATR under Limited Training Data via MobileNetV3.<br>
-                    <strong>Chenwei Wang</strong>, Siyi Luo, Lin Liu, Yin Zhang, Jifang Pei, Yulin Huang, Jianyu Yang.<br>
-                    <em>2023 IEEE Radar Conference (RadarConf23), pp. 1-6, 2023.</em></li>
-
-                    <li><strong>[IEEE RadarConf 2023]</strong> Self-Supervised Contrastive Learning on Cross-Augmented Samples for SAR Target Recognition.<br>
-                    Xiaoyu Liu, <strong>Chenwei Wang</strong>, Jifang Pei, Weibo Huo, Yin Zhang, Yulin Huang, Zhichao Sun.<br>
-                    <em>2023 IEEE Radar Conference (RadarConf23), pp. 1-6, 2023.</em></li>
-
-                    <li><strong>[IGARSS 2023]</strong> Transfer Learning on Self-Supervised Model for SAR Target Recognition with Limited Labeled Data.<br>
-                    Xiaoyu Liu, Lin Liu, <strong>Chenwei Wang</strong>, Jifang Pei, Weibo Huo, Yin Zhang, Yulin Huang.<br>
-                    <em>IGARSS 2023 - IEEE International Geoscience and Remote Sensing Symposium, pp. 7507-7510, 2023.</em></li>
-
-                    <li><strong>[arXiv]</strong> SAR Ship Target Recognition via Selective Feature Discrimination and Multifeature Center Classifier.<br>
-                    <strong>Chenwei Wang</strong>, Siyi Luo, Jifang Pei, Yulin Huang, Yin Zhang, Jianyu Yang.<br>
-                    <em>arXiv preprint arXiv:2308.10250, 2023.</em></li>
-                </ul>
-
-                <h4>2022</h4>
-                <ul>
-                    <li><strong>[IEEE TGRS]</strong> Recognition in Label and Discrimination in Feature: A Hierarchically Designed Lightweight Method for Limited Data in SAR ATR.<br>
-                    <strong>Chenwei Wang</strong>, Jifang Pei, Jianyu Yang, Xiaoyu Liu, Yulin Huang, Deqing Mao.<br>
-                    <em>IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1-13, 2022.</em></li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <p>A complete list of publications can be found on my <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
-
-                <!-- Footer -->
-                <div class="footer_small">
-                    <p>&copy; 2025 Chenwei Wang. Last updated: Feb 2025.</p>
+                <!-- 2025 -->
+                <div class="pub-year-group">
+                    <div class="pub-year-badge">2025</div>
+                    <ul class="pub-year-list">
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">CVPR 2025</span>
+                                <span class="pub-entry__tag pub-entry__tag--highlight">Highlight</span>
+                                <span class="pub-entry__tag pub-entry__tag--secondary">Co-first</span>
+                            </div>
+                            <div class="pub-entry__title">Volume Tells: Dual Cycle-Consistent Diffusion for 3D Fluorescence Microscopy Denoising and Super-Resolution.</div>
+                            <div class="pub-entry__authors">Zelin Li*, <strong>Chenwei Wang*</strong>, Zhaoke Huang, Yiming Ma, Cunmin Zhao, Zhongying Zhao, Hong Yan.</div>
+                            <div class="pub-entry__detail">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025. (Co-first)</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE TGRS</span>
+                                <span class="pub-entry__tag pub-entry__tag--highlight">ESI Highly Cited</span>
+                            </div>
+                            <div class="pub-entry__title">Limited-Data SAR ATR Causal Method via Dual-Invariance Intervention.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Renjie Xu, Yulin Huang, Jifang Pei, Chuan Huang, Wenqi Zhu, Jianyu Yang.</div>
+                            <div class="pub-entry__detail">IEEE Transactions on Geoscience and Remote Sensing, 2025.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE TII</span>
+                            </div>
+                            <div class="pub-entry__title">A Spatio-Temporal Feature Distribution Network for Device-Free Power Inspection Activity Using WiFi CSI.</div>
+                            <div class="pub-entry__authors">Cunyi Yin, Zhaoke Huang, Hao Jiang, Jing Chen, Zhida Wang, <strong>Chenwei Wang</strong>, Zhenghua Chen, Zhiwen Chen, Hong Yan.</div>
+                            <div class="pub-entry__detail">IEEE Transactions on Industrial Informatics, 2025.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE TVT</span>
+                            </div>
+                            <div class="pub-entry__title">Evolving Collaborative Differential Evolution for Dynamic Multi-objective UAV Path Planning.</div>
+                            <div class="pub-entry__authors">Renjie Xu, Zhaoke Huang, <strong>Chenwei Wang</strong>, Hong Yan.</div>
+                            <div class="pub-entry__detail">IEEE Transactions on Vehicular Technology, 2025.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">arXiv</span>
+                            </div>
+                            <div class="pub-entry__title">An Interpretable Two-Stage Feature Decomposition Method for Deep Learning-based SAR ATR.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Renjie Xu, Congwen Wu, Cunyi Yin, Ziyun Liao, Deqing Mao, Sitong Zhang, Hong Yan.</div>
+                            <div class="pub-entry__detail">arXiv preprint arXiv:2506.09377, 2025.</div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
+
+                <!-- 2024 -->
+                <div class="pub-year-group">
+                    <div class="pub-year-badge">2024</div>
+                    <ul class="pub-year-list">
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">ISPRS JPRS, IF=12.7</span>
+                            </div>
+                            <div class="pub-entry__title">Crucial Feature Capture and Discrimination for Limited Training Data SAR ATR.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Siyi Luo, Jifang Pei, Yulin Huang, Yin Zhang, Jianyu Yang.</div>
+                            <div class="pub-entry__detail">ISPRS Journal of Photogrammetry and Remote Sensing, vol. 204, pp. 291-305, 2024.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE GRSL</span>
+                            </div>
+                            <div class="pub-entry__title">Unveiling Causalities in SAR ATR: A Causal Interventional Approach for Limited Data.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Xin Chen, You Qin, Siyi Luo, Yulin Huang, Jifang Pei, Jianyu Yang.</div>
+                            <div class="pub-entry__detail">IEEE Geoscience and Remote Sensing Letters, 2024.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2023 -->
+                <div class="pub-year-group">
+                    <div class="pub-year-badge">2023</div>
+                    <ul class="pub-year-list">
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE TGRS</span>
+                            </div>
+                            <div class="pub-entry__title">SAR ATR Method with Limited Training Data via an Embedded Feature Augmenter and Dynamic Hierarchical-Feature Refiner.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Siyi Luo, Yulin Huang, Jifang Pei, Yin Zhang, Jianyu Yang.</div>
+                            <div class="pub-entry__detail">IEEE Transactions on Geoscience and Remote Sensing, vol. 61, pp. 1-15, 2023.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE TGRS</span>
+                            </div>
+                            <div class="pub-entry__title">HDSS-Net: A Novel Hierarchically Designed Network with Spherical Space Classifier for Ship Recognition in SAR Images.</div>
+                            <div class="pub-entry__authors">Yuanzhe Shang, Wei Pu, Congwen Wu, Danling Liao, Xiaowo Xu, <strong>Chenwei Wang</strong>, Yulin Huang, Yin Zhang, Junjie Wu, Jianyu Yang.</div>
+                            <div class="pub-entry__detail">IEEE Transactions on Geoscience and Remote Sensing, vol. 61, pp. 1-20, 2023.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">ACM MM 2023</span>
+                                <span class="pub-entry__tag pub-entry__tag--secondary">Co-first</span>
+                            </div>
+                            <div class="pub-entry__title">Biased-Predicate Annotation Identification via Unbiased Visual Predicate Representation.</div>
+                            <div class="pub-entry__authors">Li Li*, <strong>Chenwei Wang*</strong>, You Qin, Wei Ji, Renjie Liang.</div>
+                            <div class="pub-entry__detail">Proceedings of the 31st ACM International Conference on Multimedia, pp. 4410-4420, 2023. (Co-first)</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE GRSL</span>
+                            </div>
+                            <div class="pub-entry__title">An Entropy-Awareness Meta-Learning Method for SAR Open-Set ATR.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Siyi Luo, Jifang Pei, Xiaoyu Liu, Yulin Huang, Yin Zhang, Jianyu Yang.</div>
+                            <div class="pub-entry__detail">IEEE Geoscience and Remote Sensing Letters, vol. 20, pp. 1-5, 2023.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE GRSL</span>
+                            </div>
+                            <div class="pub-entry__title">SAR Ship Target Recognition via Multiscale Feature Attention and Adaptive-Weighed Classifier.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Jifang Pei, Siyi Luo, Weibo Huo, Yulin Huang, Yin Zhang, Jianyu Yang.</div>
+                            <div class="pub-entry__detail">IEEE Geoscience and Remote Sensing Letters, vol. 20, pp. 1-5, 2023.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE RadarConf 2023</span>
+                            </div>
+                            <div class="pub-entry__title">SAR ATR under Limited Training Data via MobileNetV3.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Siyi Luo, Lin Liu, Yin Zhang, Jifang Pei, Yulin Huang, Jianyu Yang.</div>
+                            <div class="pub-entry__detail">2023 IEEE Radar Conference (RadarConf23), pp. 1-6, 2023.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE RadarConf 2023</span>
+                            </div>
+                            <div class="pub-entry__title">Self-Supervised Contrastive Learning on Cross-Augmented Samples for SAR Target Recognition.</div>
+                            <div class="pub-entry__authors">Xiaoyu Liu, <strong>Chenwei Wang</strong>, Jifang Pei, Weibo Huo, Yin Zhang, Yulin Huang, Zhichao Sun.</div>
+                            <div class="pub-entry__detail">2023 IEEE Radar Conference (RadarConf23), pp. 1-6, 2023.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IGARSS 2023</span>
+                            </div>
+                            <div class="pub-entry__title">Transfer Learning on Self-Supervised Model for SAR Target Recognition with Limited Labeled Data.</div>
+                            <div class="pub-entry__authors">Xiaoyu Liu, Lin Liu, <strong>Chenwei Wang</strong>, Jifang Pei, Weibo Huo, Yin Zhang, Yulin Huang.</div>
+                            <div class="pub-entry__detail">IGARSS 2023 - IEEE International Geoscience and Remote Sensing Symposium, pp. 7507-7510, 2023.</div>
+                        </li>
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">arXiv</span>
+                            </div>
+                            <div class="pub-entry__title">SAR Ship Target Recognition via Selective Feature Discrimination and Multifeature Center Classifier.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Siyi Luo, Jifang Pei, Yulin Huang, Yin Zhang, Jianyu Yang.</div>
+                            <div class="pub-entry__detail">arXiv preprint arXiv:2308.10250, 2023.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2022 -->
+                <div class="pub-year-group">
+                    <div class="pub-year-badge">2022</div>
+                    <ul class="pub-year-list">
+                        <li class="pub-entry">
+                            <div class="pub-entry__tags">
+                                <span class="pub-entry__tag pub-entry__tag--venue">IEEE TGRS</span>
+                            </div>
+                            <div class="pub-entry__title">Recognition in Label and Discrimination in Feature: A Hierarchically Designed Lightweight Method for Limited Data in SAR ATR.</div>
+                            <div class="pub-entry__authors"><strong>Chenwei Wang</strong>, Jifang Pei, Jianyu Yang, Xiaoyu Liu, Yulin Huang, Deqing Mao.</div>
+                            <div class="pub-entry__detail">IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1-13, 2022.</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <p class="page-intro reveal">A complete list of publications can be found on my <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Chenwei Wang. Last updated: Feb 2026.</p>
+        </footer>
     </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
