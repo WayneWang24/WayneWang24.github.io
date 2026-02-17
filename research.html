@@ -3,108 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chenwei Wang - Research</title>
-    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <title>Chenwei Wang</title>
     <link rel="shortcut icon" href="image/Wayne.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <link href="style/css" rel="stylesheet" type="text/css">
+    <link href="style/css(1)" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div id="wrapper">
         <!-- HEADER -->
-        <div id="header">
+        <header id="header">
             <div class="inner">
-                <div class="log">Chenwei Wang</div>
-                <div class="nav">
+                <div class="log">
+                    <p><a href="index.html" class="site-title">Chenwei Wang</a></p>
+                </div>
+                <nav class="nav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li class="current"><a href="research.html">Research</a></li>
                         <li><a href="publications.html">Publications</a></li>
-                        <li><a href="award.html">Awards</a></li>
+                        <li><a href="award.html">Award</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
-        </div>
+        </header>
 
         <!-- MAIN CONTENT -->
-        <div id="main">
+        <main id="main">
             <div class="inner">
-                <h3>Research Overview</h3>
-                <p>My research centers on <strong>multimodal perception and representation learning</strong>, with a particular focus on tackling challenges such as data scarcity, cross-modal inconsistency, and complex environments. My work advances the development of intelligent multimodal perception systems capable of efficient inference and reliable decision-making in real-world scenarios.</p>
 
-                <p>Here is my <a href="https://scholar.google.com/citations?user=LMBzxWAAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
+                <h3>Research Interests</h3>
 
-                <div class="divider line"></div>
+                <p>We are interested in solving real-world problems using cutting-edge data-driven solutions. Specifically, my research focus can be broadly sorted in to three directions, including <span class="highlight-light">Multimodal Event Forecasting, Computational Fashion, and Recommender System</span>. More importantly, I endeavour to apply these research outcomes in multiple inter-disciplinary domains, including <span class="highlight-light">international politics, cyber security, financial technology, fashion, music, as well as E-commerce</span>.
+                Here is my <a href="https://scholar.google.com/citations?user=WSDsPtMAAAAJ&hl=en" target="_blank" rel="nofollow">Google Scholar</a>.
+                Here are my detailed research topics:</p>
 
-                <h3>1. Multimodal Image Understanding</h3>
+                <div class="research-topic">
+                    <h4>Multimodal Event Forecasting</h4>
+                    <ul>
+                        <li>International Political Event Detection and Forecasting</li>
+                        <li>Cyber Threat Intelligence Analysis and Prediction</li>
+                        <li>Financial Market and Macro-Economy Index Forecasting</li>
+                    </ul>
+                </div>
 
-                <h4>Microwave Remote Sensing Image Interpretation with Limited Samples</h4>
-                <ul>
-                    <li>Proposed a FeaCD net for recognizing vehicle, ship and so on. It incorporates domain knowledge to effectively supervise model optimization. This approach significantly reduces data volume requirements. Compared to existing methods, even when the sample size is reduced by 5-10 times, the ships recognition rates still exceed 70%.</li>
-                    <li>The proposed methods are fundamental processes for areas such as land use, maritime rescue and so on. Publications include <strong>ISPRS JPRS</strong>, <strong>IEEE TGRS</strong> and others.</li>
-                </ul>
+                <div class="research-topic">
+                    <h4>Computational Fashion</h4>
+                    <ul>
+                        <li>Fahion Trend Forecasting</li>
+                        <li>Generative and Personalized Mix-and-Match</li>
+                        <li>Fashion Report Generation</li>
+                    </ul>
+                </div>
 
-                <h4>Multimodal Information Retrieval for Panoptic Scene Graph Generation (PSG)</h4>
-                <ul>
-                    <li>Proposed a method introducing the coreset concept to clean multimodal datasets. It enhances the performance of recognizing semantic relations between instances within images. The method has boosted recall ratios by ~50% compared to existing methods.</li>
-                    <li>The proposed method can be extended for use with combinations of various modalities. Accepted by <strong>ACM MM 2023</strong> with full scores.</li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <h3>2. Multimodal Radar-Centric 3D Perception</h3>
-
-                <h4>Indoor Multi-View Radar Perception</h4>
-                <ul>
-                    <li>Proposed CrossFuser, a dual-stage fusion framework for indoor 3D object detection using multi-view mmWave radar. It decouples radar geometry modeling from cross-view feature fusion to address spatial inconsistency and severe multipath noise.</li>
-                    <li>Achieved state-of-the-art detection performance on benchmark indoor datasets under challenging conditions like occlusion and electromagnetic clutter. Submitted to <strong>AAAI 2026</strong>.</li>
-                </ul>
-
-                <h4>Camera-Radar Fusion for 3D Objective Detection in Automotive Driving</h4>
-                <ul>
-                    <li>Proposed CIFM-Fusion, a coarse-to-fine radar-camera fusion framework that decouples semantic alignment from feature fusion, mitigating radar-camera misalignment caused by resolution anisotropy.</li>
-                    <li>Outperformed existing fusion methods on the nuScenes benchmark, with significant reduction in offset errors, demonstrating strong robustness under adverse driving conditions. Submitted to <strong>AAAI 2026</strong>.</li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <h3>3. Biomedical Volume Reconstruction and Prediction</h3>
-
-                <h4>3D Fluorescence Microscopy Long-term Live-cell Imaging</h4>
-                <ul>
-                    <li>Proposed a dual Cycle-consistent Diffusion framework (VTCD) to simultaneously denoise and super-resolve 3D cell volumes in an unsupervised manner, overcoming issues of spatially varying noise and insufficient axial resolution.</li>
-                    <li>Experimental results on 10 in vivo cellular datasets show significant improvements in both denoising and super-resolution, with axial resolution enhanced from ~430nm to ~90nm, enabling clearer and more accurate long-term live-cell imaging. Accepted by <strong>CVPR 2025</strong> as <font color="#FF4D50"><strong>Highlight</strong></font>.</li>
-                </ul>
-
-                <h4>Information Perception for Assisted Diagnosis of Glomerular Diseases</h4>
-                <ul>
-                    <li>Under the guidance of professional doctors of Sichuan Provincial People's Hospital in China, I was responsible for organizing the pixel-level annotation of 1615 glomerular morphological lesions, including segmental sclerosis, crescent, and sclerosis.</li>
-                    <li>Proposed the EdgeSharp segmentor, pioneering in research semantic segmentation of glomerular morphological lesions with the mIoU and mPA of 67.91% and 77.06%, respectively.</li>
-                </ul>
-
-                <div class="divider line"></div>
-
-                <h3>4. Multimodal Indoor Localization and Navigation</h3>
-
-                <h4>Indoor Location and Navigation System</h4>
-                <ul>
-                    <li>Lead the team in the R&D of the indoor location system based on UWB, BLE RSSI/AOA, and developed an AI indoor location and navigation system with comprehensive function.</li>
-                    <li>The location accuracy based on BLE RSSI is 1-2m, UWB achieves 0.1m, and BLE AOA is 0.2-0.5m. In a 200m² room, the setup required only 5 BLE RSSI beacons, 3 UWB anchors, and 4 BLE AOA Receivers.</li>
-                    <li>Developed iOS and Android apps for the whole system, tested and adopted in the HK K11 mall and the HK MTR stations for blind care.</li>
-                </ul>
-
-                <h4>3D Indoor Localization System for UAVs based on Channel State Information</h4>
-                <ul>
-                    <li>Proposed a novel 3D indoor localization system leveraging low-cost ESP32 IoT-based channel state information (CSI) to enable accurate UAV positioning in GPS-denied indoor environments.</li>
-                    <li>Incorporated a dynamic AGC compensation algorithm to stabilize CSI signals and a multi-task Sensor-in-Sample (SiS) model to handle incomplete sensor data and limited training samples, ensuring robustness in resource-constrained scenarios.</li>
-                    <li>Experimental results show a LMSE localization error of 0.2629m in 3D space, offering a cost-effective, accurate, and scalable solution for UAVs in logistics, surveillance, and emergency response applications.</li>
-                </ul>
+                <div class="research-topic">
+                    <h4>Recommender System</h4>
+                    <ul>
+                        <li>Personalized Bundle Recommendation</li>
+                        <li>Bundle Construction and Generation</li>
+                        <li>Multimodal Pre-training for Recommendation</li>
+                    </ul>
+                </div>
 
                 <!-- Footer -->
-                <div class="footer_small">
-                    <p>&copy; 2025 Chenwei Wang. Last updated: Feb 2025.</p>
+                <div class="footer">
+                    Webpage template borrows from <a href="https://xiangwang1223.github.io/">Prof Xiang Wang</a>, <a href="http://staff.ustc.edu.cn/~hexn/">Prof Xiangnan He</a> and <a href="https://cs.rice.edu/~xh37/index.html">Prof Xia Hu</a>
                 </div>
+
             </div>
-        </div>
+        </main>
     </div>
 </body>
 </html>
